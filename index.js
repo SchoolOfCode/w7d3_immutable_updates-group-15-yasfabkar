@@ -32,7 +32,11 @@ export function removeItem(array, index) {
 //     updateName({ name: "Abe" }, "Barbara")
 // should give back:
 //     { name: "Barbara"}
-export function updateName(object, newName) {}
+export function updateName(object, newName) {
+  const obj = { ...object };
+  obj.name = newName;
+  return obj;
+}
 
 // Immutably update the object so that the value under the "needsACupOfTea" property becomes the opposite of what it was.
 // Any other properties in the object should be maintained.
