@@ -21,7 +21,9 @@ export function replaceItem(array, item, index) {
 }
 
 // Immutably remove an item at a specific position/index within an array
-export function removeItem(array, index) {}
+export function removeItem(array, index) {
+  return [...array.slice(0, index), ...array.slice(index + 1)];
+}
 
 //Objects:
 
